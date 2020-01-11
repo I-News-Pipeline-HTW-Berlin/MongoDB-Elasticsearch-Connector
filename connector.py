@@ -27,7 +27,7 @@ for mongo_id in map(extract_mongo_id, mongo_coll.find(dict(), {"_id":1})):
     already_indexed = indexed_object["hits"]["total"]["value"] == 0
     if already_indexed:
         continue
-    mongo_doc = mongo_coll.find({"_id":mongo_id})
+    mongo_doc = mongo_coll.find_one({"_id":mongo_id})
     mongo_doc[u"mongo_id"] = mongo_doc[u"_id"]
     del mongo_doc[u"_id"]
     es.create(index=sec.ELASTICSEARCH_INDEX,
