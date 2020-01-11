@@ -13,7 +13,7 @@ def extract_mongo_id(document):
     return document[u'_id']
 
 for mongo_id in map(extract_mongo_id, mongo_coll.find(dict(), {"_id":1})):
-    indexed_object = es.exitst(index= sec.ELASTICSEARCH_INDEX,
+    indexed_object = es.exists(index= sec.ELASTICSEARCH_INDEX,
                                id=str(mongo_id))
     already_indexed = indexed_object["hits"]["total"]["value"] == 0
     if already_indexed:
