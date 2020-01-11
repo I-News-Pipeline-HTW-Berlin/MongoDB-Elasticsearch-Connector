@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import elasticsearch
 import pymongo
 import connector_secrets as sec
