@@ -3,7 +3,7 @@
 This Connector copies all files from a MongoDB collection to an Elastisearch index
 When re-run, the already copied Documents will not be added again.
 The ObjectID from the MongoDB will determine, whether a document was already tranfered.
-In the ElasticSearch index, the ObjectID of the MongoDB will not be named "_id" like in the MongoDB, but "mongo_id"
+In the ElasticSearch index, the string of the ObjectID of the MongoDB will be used as the document id.
 
 for it to run, the following packages are required:
   elasticsearch
