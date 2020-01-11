@@ -10,7 +10,7 @@ mongo = MongoClient(host=sec.MONGO_URI, tz_aware=True)
 def extract_mongo_id(document):
     return document[u'_id']
 
-for mongo_id in map(extract_mongo_id, mongo[sec.MONGO_COLLECTION].find(dict(), {"_id":1}))
+for mongo_id in map(extract_mongo_id, mongo[sec.MONGO_COLLECTION].find(dict(), {"_id":1})):
     indexed_object = es.search(index= sec.ELASTICSEARCH_INDEX,
                         size = 1,
                         body= {"query":{
