@@ -15,6 +15,7 @@ you can install them via
 
 To specify the MongoDB location and collection, as well as the Elasticsearch host and index, create a connector_secrets.py with the following variables:
 - MONGO_URI with an URI as specified by https://docs.mongodb.com/manual/reference/connection-string/
+- MONGO_DATABASE with the name of the specified Database
 - MONGO_COLLECTION with the name of the collection to be indexed
 - ELASTICSEARCH_HOST with the URI to the host of Elastisearch
 - ELASTICSEARCH_INDEX with the index-name for the MongoDB data
