@@ -5,7 +5,7 @@ import connector_secrets as sec
 
 
 es = elasticsearch.Elasticsearch(sec.ELASTICSEARCH_HOST)
-mongo = MongoClient(host=sec.MONGO_URI, tz_aware=True)
+mongo = pymongo.MongoClient(host=sec.MONGO_URI, tz_aware=True)
 
 def extract_mongo_id(document):
     return document[u'_id']
