@@ -1,4 +1,4 @@
-# MongoDB-Ealsticsearch Connector
+# MongoDB-Elasticsearch Connector
 
 This Connector copies all files from a MongoDB collection to an Elastisearch index
 When re-run, the already copied Documents will not be added again.
