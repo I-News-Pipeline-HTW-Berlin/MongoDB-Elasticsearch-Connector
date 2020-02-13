@@ -6,12 +6,12 @@ The ObjectID from the MongoDB will determine, whether a document was already tra
 In the ElasticSearch index, the string of the ObjectID of the MongoDB will be used as the document id.
 
 for it to run, the following packages are required:
-  elasticsearch
-  pymongo
+  - elasticsearch
+  - pymongo
 
 you can install them via
-  sudo pip install pymongo
-  sudo pip install elasticsearch
+  - sudo pip install pymongo
+  - sudo pip install elasticsearch
 
 To specify the MongoDB location and collection, as well as the Elasticsearch host and index, create a connector_secrets.py with the following variables:
 - MONGO_URI with an URI as specified by https://docs.mongodb.com/manual/reference/connection-string/
